@@ -9,13 +9,13 @@ services:
     links:
       - db
   db:
-    image: mysql:5.7
+    image: mysql/mysql-server:8.0-amd64
     restart: always
     environment:
       MYSQL_DATABASE: toolingdb
       MYSQL_USER: Nick2020
       MYSQL_PASSWORD: Tinmothy
-      MYSQL_RANDOM_ROOT_PASSWORD: '2'
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       - db:/var/lib/mysql
 volumes:
